@@ -13,6 +13,7 @@ public class Main {
 
     
         String x = "alfa";
+        int y = 8;
     /**
      * @param args the command line arguments
      */
