@@ -47,7 +47,7 @@ public class principal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(-1,true));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JPPrincipal.setBackground(new java.awt.Color(-8355712,true));
+        JPPrincipal.setBackground(new java.awt.Color(-8388353,true));
 
         JPSecundario.setBackground(new java.awt.Color(-1,true));
 
@@ -75,7 +75,7 @@ public class principal extends javax.swing.JFrame {
             .addComponent(JPCadastroUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        BTCadastrar.setBackground(new java.awt.Color(-8355712,true));
+        BTCadastrar.setBackground(new java.awt.Color(-8388353,true));
         BTCadastrar.setForeground(new java.awt.Color(-1,true));
         BTCadastrar.setText("Cadastrar");
         BTCadastrar.setBorderPainted(false);
@@ -86,7 +86,7 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        BTAgendamento.setBackground(new java.awt.Color(-8355712,true));
+        BTAgendamento.setBackground(new java.awt.Color(-8388353,true));
         BTAgendamento.setForeground(new java.awt.Color(-1,true));
         BTAgendamento.setText("Agendamento");
         BTAgendamento.setBorderPainted(false);
@@ -97,20 +97,20 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(-8355712,true));
+        jButton3.setBackground(new java.awt.Color(-8388353,true));
         jButton3.setForeground(new java.awt.Color(-1,true));
         jButton3.setText("Relatorios");
         jButton3.setBorderPainted(false);
         jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jButton4.setBackground(new java.awt.Color(-8355712,true));
+        jButton4.setBackground(new java.awt.Color(-8388353,true));
         jButton4.setForeground(new java.awt.Color(-1,true));
         jButton4.setText("Caixa");
         jButton4.setAlignmentY(0.0F);
         jButton4.setBorderPainted(false);
         jButton4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jButton5.setBackground(new java.awt.Color(-8355712,true));
+        jButton5.setBackground(new java.awt.Color(-8388353,true));
         jButton5.setForeground(new java.awt.Color(-1,true));
         jButton5.setText("Configurações");
         jButton5.setAlignmentY(0.0F);
