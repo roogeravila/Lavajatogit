@@ -23,10 +23,10 @@ public class Banco {
             try{
                 enviar.close();
                 conectar.close();
-                System.out.println("Banco de dados finalizado com sucesso!");
+                System.out.println("conexão com o Banco de dados finalizada com sucesso!");
             }
             catch (Exception exception){
-                System.out.println("Banco de dados não foi finalizado com sucesso!");
+                System.out.println("conexão com o Banco de dados falhou!");
             }
         }*/
     }
