@@ -172,11 +172,11 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
 private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
-JPCadastroUsuario.setVisible(true);// TODO add your handling code here:
+// TODO add your handling code here:
 }//GEN-LAST:event_BTCadastrarActionPerformed
 
 private void BTAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAgendamentoActionPerformed
-JPSecundario.setVisible(true);// TODO add your handling code here:
+// TODO add your handling code here:
 }//GEN-LAST:event_BTAgendamentoActionPerformed
 
     /**
