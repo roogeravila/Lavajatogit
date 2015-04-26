@@ -15,7 +15,8 @@ package ProjetoSalao;
  * @author Dev
  */
 public class login extends javax.swing.JPanel {
-
+    public void ConsultaLogin(String x, String y){
+            }
     /** Creates new form login */
     public login() {
         initComponents();
@@ -30,36 +31,41 @@ public class login extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        lbLogin = new javax.swing.JLabel();
+        tfUser = new javax.swing.JTextField();
+        lbUsuario = new javax.swing.JLabel();
+        lbSenha = new javax.swing.JLabel();
+        lbMensagem = new javax.swing.JLabel();
+        tfSenha = new javax.swing.JPasswordField();
+        btEntrar = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(-8355712,true));
+        setBackground(new java.awt.Color(-8388353,true));
 
-        jLabel1.setBackground(new java.awt.Color(-1,true));
-        jLabel1.setFont(new java.awt.Font("Dialog", 0, 36));
-        jLabel1.setForeground(new java.awt.Color(-1,true));
-        jLabel1.setText("Login");
+        lbLogin.setBackground(new java.awt.Color(-1,true));
+        lbLogin.setFont(new java.awt.Font("Dialog", 0, 36));
+        lbLogin.setForeground(new java.awt.Color(-1,true));
+        lbLogin.setText("Login");
 
-        jLabel2.setBackground(new java.awt.Color(-1,true));
-        jLabel2.setForeground(new java.awt.Color(-1,true));
-        jLabel2.setText("Usuário:");
+        lbUsuario.setBackground(new java.awt.Color(-1,true));
+        lbUsuario.setForeground(new java.awt.Color(-1,true));
+        lbUsuario.setText("Usuário:");
 
-        jLabel3.setBackground(new java.awt.Color(-1,true));
-        jLabel3.setForeground(new java.awt.Color(-1,true));
-        jLabel3.setText("Senha:");
+        lbSenha.setBackground(new java.awt.Color(-1,true));
+        lbSenha.setForeground(new java.awt.Color(-1,true));
+        lbSenha.setText("Senha:");
 
-        jLabel4.setForeground(new java.awt.Color(-65536,true));
-        jLabel4.setText("MENSAGEM DE ERRO!");
+        lbMensagem.setForeground(new java.awt.Color(-65536,true));
+        lbMensagem.setText("MENSAGEM DE ERRO!");
 
-        jButton1.setBackground(new java.awt.Color(-8355712,true));
-        jButton1.setForeground(new java.awt.Color(-1,true));
-        jButton1.setText("Entrar");
-        jButton1.setOpaque(false);
+        btEntrar.setBackground(new java.awt.Color(-8355712,true));
+        btEntrar.setForeground(new java.awt.Color(-1,true));
+        btEntrar.setText("Entrar");
+        btEntrar.setOpaque(false);
+        btEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -69,56 +75,62 @@ public class login extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(101, 101, 101)
-                        .addComponent(jLabel2)
+                        .addComponent(lbUsuario)
                         .addGap(10, 10, 10)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfUser, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(107, 107, 107)
-                        .addComponent(jLabel3)
+                        .addComponent(lbSenha)
                         .addGap(9, 9, 9)
-                        .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(tfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(20, 20, 20)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(btEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(130, 130, 130)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(lbMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(186, 186, 186)
+                        .addComponent(lbLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(128, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(157, 157, 157)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
+                .addGap(57, 57, 57)
+                .addComponent(lbLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(3, 3, 3)
-                        .addComponent(jLabel2))
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(lbUsuario))
+                    .addComponent(tfUser, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(14, 14, 14)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
+                    .addComponent(lbSenha)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(1, 1, 1)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1))))
+                            .addComponent(tfSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btEntrar))))
                 .addGap(17, 17, 17)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lbMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(97, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
+        String user = tfUser.getText();
+        String senha = tfSenha.getText();
+consultaLogin(user, senha) ;       // TODO add your handling code here:
+    }//GEN-LAST:event_btEntrarActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton btEntrar;
+    private javax.swing.JLabel lbLogin;
+    private javax.swing.JLabel lbMensagem;
+    private javax.swing.JLabel lbSenha;
+    private javax.swing.JLabel lbUsuario;
+    private javax.swing.JPasswordField tfSenha;
+    private javax.swing.JTextField tfUser;
     // End of variables declaration//GEN-END:variables
 }
