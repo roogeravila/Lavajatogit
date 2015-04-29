@@ -27,23 +27,23 @@
                       <EmptySpace min="101" pref="101" max="101" attributes="0"/>
                       <Component id="lbUsuario" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="10" pref="10" max="10" attributes="0"/>
-                      <Component id="tfUser" min="-2" pref="90" max="-2" attributes="0"/>
+                      <Component id="tfNome" min="-2" pref="90" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="107" pref="107" max="107" attributes="0"/>
                       <Component id="lbSenha" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="9" pref="9" max="9" attributes="0"/>
-                      <Component id="tfSenha" min="-2" pref="90" max="-2" attributes="0"/>
-                      <EmptySpace min="20" pref="20" max="20" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="tfSenha" min="-2" pref="91" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btEntrar" min="-2" pref="75" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="130" pref="130" max="130" attributes="0"/>
-                      <Component id="lbMensagem" min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
                       <Component id="lbLogin" min="-2" pref="90" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="165" max="-2" attributes="0"/>
+                      <Component id="lbMensagem" min="-2" pref="110" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="128" max="32767" attributes="0"/>
@@ -61,22 +61,22 @@
                       <EmptySpace min="3" pref="3" max="3" attributes="0"/>
                       <Component id="lbUsuario" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="tfUser" min="-2" max="-2" attributes="0"/>
+                  <Component id="tfNome" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="14" pref="14" max="14" attributes="0"/>
+              <EmptySpace min="11" pref="11" max="11" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="lbSenha" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lbSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="tfSenha" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
                       <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="tfSenha" min="-2" max="-2" attributes="0"/>
-                          <Component id="btEntrar" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="btEntrar" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="17" pref="17" max="17" attributes="0"/>
+              <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               <Component id="lbMensagem" min="-2" pref="21" max="-2" attributes="0"/>
-              <EmptySpace pref="97" max="32767" attributes="0"/>
+              <EmptySpace pref="91" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -96,7 +96,7 @@
         <Property name="text" type="java.lang.String" value="Login"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tfUser">
+    <Component class="javax.swing.JTextField" name="tfNome">
     </Component>
     <Component class="javax.swing.JLabel" name="lbUsuario">
       <Properties>
@@ -128,8 +128,6 @@
         <Property name="text" type="java.lang.String" value="MENSAGEM DE ERRO!"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="tfSenha">
-    </Component>
     <Component class="javax.swing.JButton" name="btEntrar">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="com.sun.beans.editors.ColorEditor">
@@ -143,6 +141,14 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btEntrarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JPasswordField" name="tfSenha">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfSenhaActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

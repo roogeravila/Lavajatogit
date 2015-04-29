@@ -4,10 +4,10 @@ import java.sql.*;
 
 
 public class Banco {
-    private static Connection conectar;
-    private static Statement enviar;
-    private static ResultSet pegar;
-    private static ResultSetMetaData retornar;
+    static Connection conectar;
+    static Statement enviar;
+    static ResultSet pegar;
+    static ResultSetMetaData retornar;
     
     public void ConectaBanco(){
         try{
