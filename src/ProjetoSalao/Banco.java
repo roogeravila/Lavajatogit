@@ -9,7 +9,7 @@ public class Banco {
     static ResultSet pegar;
     static ResultSetMetaData retornar;
     
-    public void ConectaBanco(){
+    public static void ConectaBanco(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
             conectar = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdsalao","adm","adm");
@@ -31,7 +31,7 @@ public class Banco {
         }*/
     }
     
-    public void cadastra (String sql){
+    public  void cadastra (String sql){
         try{
             enviar=null;
             enviar=conectar.createStatement();
