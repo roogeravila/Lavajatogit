@@ -226,10 +226,14 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tfCpfActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
+String Nome, Cpf,rg, cidade, endereco, bairro, dataNascimento       ;
+Nome = tfNomes.getText(); // pega o valor do campo de texto tfNomes e atribui a variavel nome
+Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atribui a variavel cpf
         try {
+            
             ConectaBanco();
             String cad_cliente = tfNomes.getText();
-            enviar.executeUpdate("INSERT INTO (Nome) VALUES ('" + cad_cliente + "')");
+            enviar.executeUpdate("INSERT INTO Cad_Cliente(Nome,Cpf) VALUES (Nome,Cpf)"); //insere na tablea Cad_Cliente os Valores 
             JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso!!");
             tfNomes.setText("");
             conectar.close();
