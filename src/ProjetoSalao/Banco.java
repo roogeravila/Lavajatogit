@@ -12,7 +12,7 @@ public class Banco {
     public static void ConectaBanco(){
         try{
             Class.forName("com.mysql.jdbc.Driver");
-            conectar = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdsalao","adm","adm");
+            conectar = DriverManager.getConnection("jdbc:mysql://localhost:8080/bdsalao","adm","adm");
             enviar = conectar.createStatement();
             System.out.println("Banco de dados conectado com sucesso!");
         }

@@ -33,33 +33,42 @@ public class principal extends javax.swing.JFrame {
         JPPrincipal = new javax.swing.JPanel();
         BTCadastrar = new javax.swing.JButton();
         BTAgendamento = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btRelatorio = new javax.swing.JButton();
+        btCaixa = new javax.swing.JButton();
+        btConfig = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jLayeredPane2 = new javax.swing.JLayeredPane();
+        painel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Sis Salão");
         setAutoRequestFocus(false);
         setBackground(new java.awt.Color(-1,true));
 
-        JPPrincipal.setBackground(new java.awt.Color(-8388353,true));
+        JPPrincipal.setBackground(new java.awt.Color(-32640,true));
 
-        BTCadastrar.setBackground(new java.awt.Color(-8388353,true));
+        BTCadastrar.setBackground(new java.awt.Color(-32640,true));
         BTCadastrar.setForeground(new java.awt.Color(-1,true));
         BTCadastrar.setText("Cadastrar");
         BTCadastrar.setBorderPainted(false);
         BTCadastrar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        BTCadastrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BTCadastrarMouseClicked(evt);
+            }
+        });
+        BTCadastrar.addComponentListener(new java.awt.event.ComponentAdapter() {
+            public void componentHidden(java.awt.event.ComponentEvent evt) {
+                BTCadastrarComponentHidden(evt);
+            }
+        });
         BTCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BTCadastrarActionPerformed(evt);
             }
         });
 
-        BTAgendamento.setBackground(new java.awt.Color(-8388353,true));
+        BTAgendamento.setBackground(new java.awt.Color(-32640,true));
         BTAgendamento.setForeground(new java.awt.Color(-1,true));
         BTAgendamento.setText("Agendamento");
         BTAgendamento.setBorderPainted(false);
@@ -70,25 +79,25 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(-8388353,true));
-        jButton3.setForeground(new java.awt.Color(-1,true));
-        jButton3.setText("Relatorios");
-        jButton3.setBorderPainted(false);
-        jButton3.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btRelatorio.setBackground(new java.awt.Color(-32640,true));
+        btRelatorio.setForeground(new java.awt.Color(-1,true));
+        btRelatorio.setText("Relatorios");
+        btRelatorio.setBorderPainted(false);
+        btRelatorio.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jButton4.setBackground(new java.awt.Color(-8388353,true));
-        jButton4.setForeground(new java.awt.Color(-1,true));
-        jButton4.setText("Caixa");
-        jButton4.setAlignmentY(0.0F);
-        jButton4.setBorderPainted(false);
-        jButton4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btCaixa.setBackground(new java.awt.Color(-32640,true));
+        btCaixa.setForeground(new java.awt.Color(-1,true));
+        btCaixa.setText("Caixa");
+        btCaixa.setAlignmentY(0.0F);
+        btCaixa.setBorderPainted(false);
+        btCaixa.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
-        jButton5.setBackground(new java.awt.Color(-8388353,true));
-        jButton5.setForeground(new java.awt.Color(-1,true));
-        jButton5.setText("Configurações");
-        jButton5.setAlignmentY(0.0F);
-        jButton5.setBorderPainted(false);
-        jButton5.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btConfig.setBackground(new java.awt.Color(-32640,true));
+        btConfig.setForeground(new java.awt.Color(-1,true));
+        btConfig.setText("Configurações");
+        btConfig.setAlignmentY(0.0F);
+        btConfig.setBorderPainted(false);
+        btConfig.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jLabel4.setForeground(new java.awt.Color(-1,true));
         jLabel4.setText("Usuario Ativo:");
@@ -96,30 +105,16 @@ public class principal extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(-1,true));
         jLabel5.setText("Admin");
 
-        jDesktopPane1.setBackground(new java.awt.Color(128, 0, 255));
+        painel2.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+        javax.swing.GroupLayout painel2Layout = new javax.swing.GroupLayout(painel2);
+        painel2.setLayout(painel2Layout);
+        painel2Layout.setHorizontalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 133, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 379, Short.MAX_VALUE)
-        );
-
-        jLayeredPane2.setBackground(new java.awt.Color(255, 255, 255));
-        jLayeredPane2.setOpaque(true);
-
-        javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
-        jLayeredPane2.setLayout(jLayeredPane2Layout);
-        jLayeredPane2Layout.setHorizontalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 795, Short.MAX_VALUE)
-        );
-        jLayeredPane2Layout.setVerticalGroup(
-            jLayeredPane2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        painel2Layout.setVerticalGroup(
+            painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
@@ -128,46 +123,45 @@ public class principal extends javax.swing.JFrame {
         JPPrincipalLayout.setHorizontalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPPrincipalLayout.createSequentialGroup()
-                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addGap(398, 398, 398)
-                        .addComponent(jLabel4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel5))
-                    .addGroup(JPPrincipalLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(BTCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BTAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(379, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPPrincipalLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(398, 398, 398)
+                .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48))
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JPPrincipalLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BTAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(BTCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(1409, 1409, 1409))
         );
         JPPrincipalLayout.setVerticalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(JPPrincipalLayout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(BTCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(BTAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jDesktopPane1)
-                    .addComponent(jLayeredPane2))
-                .addGap(18, 18, 18)
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(JPPrincipalLayout.createSequentialGroup()
+                        .addComponent(BTCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(BTAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(painel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
@@ -178,13 +172,11 @@ public class principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(JPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(JPPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(JPPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -195,8 +187,20 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTAgendamentoActionPerformed
 
     private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
-        // TODO add your handling code here:
+        //desabilitando a tela atual
+        this.setEnabled(false);
+       // this.dispose();
+        new Cadastro().setVisible(true);
+        
     }//GEN-LAST:event_BTCadastrarActionPerformed
+
+    private void BTCadastrarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_BTCadastrarComponentHidden
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTCadastrarComponentHidden
+
+    private void BTCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTCadastrarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BTCadastrarMouseClicked
 
     /**
      * @param args the command line arguments
@@ -230,8 +234,7 @@ public class principal extends javax.swing.JFrame {
 
             public void run() {
                 new principal().setVisible(true);
-                // aplica color transparent  
-    
+                new Cadastro().setVisible(false);
             }
         });
     }
@@ -239,12 +242,11 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton BTAgendamento;
     private javax.swing.JButton BTCadastrar;
     private javax.swing.JPanel JPPrincipal;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JButton btCaixa;
+    private javax.swing.JButton btConfig;
+    private javax.swing.JButton btRelatorio;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLayeredPane jLayeredPane2;
+    private javax.swing.JPanel painel2;
     // End of variables declaration//GEN-END:variables
 }

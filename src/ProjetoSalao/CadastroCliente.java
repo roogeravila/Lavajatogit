@@ -58,7 +58,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         lbCelular = new javax.swing.JLabel();
         tfCancelar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         lbBairro.setText("Bairro:");
 
@@ -159,7 +159,7 @@ public class CadastroCliente extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(151, 151, 151)
                 .addComponent(btSalvar)
-                .addGap(76, 76, 76)
+                .addGap(27, 27, 27)
                 .addComponent(tfCancelar)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );

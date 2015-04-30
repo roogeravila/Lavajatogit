@@ -184,6 +184,7 @@ public class login extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
+        Mae.Principal.setVisible(true);
         
         
         /*String user = tfNome.getText();
