@@ -32,7 +32,7 @@ public class login extends javax.swing.JFrame {
         jlsenha = new javax.swing.JLabel();
         jtNomeUsuario = new javax.swing.JTextField();
         jpsenha = new javax.swing.JPasswordField();
-        jbentrar = new javax.swing.JButton();
+        btEntrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -48,16 +48,21 @@ public class login extends javax.swing.JFrame {
         jlsenha.setText("Senha");
 
         jpsenha.setText("jPasswordField1");
-
-        jbentrar.setBackground(new java.awt.Color(255, 128, 128));
-        jbentrar.setForeground(new java.awt.Color(255, 255, 255));
-        jbentrar.setText("Entra");
-        jbentrar.setFocusPainted(false);
-        jbentrar.setFocusable(false);
-        jbentrar.setOpaque(false);
-        jbentrar.addActionListener(new java.awt.event.ActionListener() {
+        jpsenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbentrarActionPerformed(evt);
+                jpsenhaActionPerformed(evt);
+            }
+        });
+
+        btEntrar.setBackground(new java.awt.Color(255, 128, 128));
+        btEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        btEntrar.setText("Entra");
+        btEntrar.setFocusPainted(false);
+        btEntrar.setFocusable(false);
+        btEntrar.setOpaque(false);
+        btEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btEntrarActionPerformed(evt);
             }
         });
 
@@ -79,7 +84,7 @@ public class login extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(jpsenha)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addComponent(jbentrar)
+                .addComponent(btEntrar)
                 .addGap(45, 45, 45))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(156, 156, 156)
@@ -97,7 +102,7 @@ public class login extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jlsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jpsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jbentrar))
+                    .addComponent(btEntrar))
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
                 .addContainerGap(97, Short.MAX_VALUE))
@@ -117,10 +122,22 @@ public class login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jbentrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbentrarActionPerformed
+    private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
        Mae.Principal.setVisible(true);
        this.dispose();
-    }//GEN-LAST:event_jbentrarActionPerformed
+    }//GEN-LAST:event_btEntrarActionPerformed
+
+    private void jpsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpsenhaActionPerformed
+ char[] Senha = jpsenha.getPassword();
+       while(Senha.length < 3){
+           btEntrar.setEnabled(false);
+           if (Senha.length >= 3){ 
+               btEntrar.setEnabled(true);
+
+               // verificar se senha inserida menor que 4 desabilita botao entrar 
+           }
+       } 
+    }//GEN-LAST:event_jpsenhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -158,9 +175,9 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btEntrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbentrar;
     private javax.swing.JLabel jlsenha;
     private javax.swing.JPasswordField jpsenha;
     private javax.swing.JTextField jtNomeUsuario;
