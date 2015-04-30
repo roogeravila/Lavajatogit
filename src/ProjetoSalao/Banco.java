@@ -31,7 +31,7 @@ public class Banco {
         }*/
     }
     
-    public  void cadastra (String sql){
+    public static void cadastra (String sql){
         try{
             enviar=null;
             enviar=conectar.createStatement();

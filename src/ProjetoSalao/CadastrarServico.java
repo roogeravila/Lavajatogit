@@ -125,7 +125,7 @@ public class CadastrarServico extends javax.swing.JPanel {
             String Valor = tfPreco.getText();
             String tempo = tfTempo.getText();
             int Setor = jcSetor.getSelectedIndex();
-            Banco.enviar("INSERT INTO Servico (Servico,Valor_Serv,Temp_Med_Serv,Setor) VALUES (nomeServico,Valor,tempo,Setor");
+            Banco.cadastra("INSERT INTO Servico (Servico,Valor_Serv,Temp_Med_Serv,Setor) VALUES (nomeServico,Valor,tempo,Setor");
             //("INSERT INTO Servico (Servico)VALUES ('"+nomeServico+"')");
             //INSERT INTO Servico (Servico,Valor_Serv,Temp_Med_Serv) VALUES (tfServico.getText(),(double)tfPreco.getText(),tfTempo.getText(),jcSetor.getSelectedIndex());
         }
