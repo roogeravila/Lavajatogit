@@ -40,6 +40,9 @@ public class Cadastro extends javax.swing.JFrame {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
             }
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
         });
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
@@ -152,6 +155,10 @@ y.setVisible(true);
 this.setEnabled(false);
 
     }//GEN-LAST:event_btServicoActionPerformed
+
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        Mae.Principal.setEnabled(true);
+    }//GEN-LAST:event_formWindowClosing
 
     /**
      * @param args the command line arguments

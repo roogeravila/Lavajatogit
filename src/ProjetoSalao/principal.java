@@ -188,10 +188,10 @@ public class principal extends javax.swing.JFrame {
 
     private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
         //desabilitando a tela atual
-        this.setEnabled(false);
-       // this.dispose();
-        new Cadastro().setVisible(true);
         
+       // this.dispose();
+        Mae.cadastro.setVisible(true);
+        this.setEnabled(false);
     }//GEN-LAST:event_BTCadastrarActionPerformed
 
     private void BTCadastrarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_BTCadastrarComponentHidden

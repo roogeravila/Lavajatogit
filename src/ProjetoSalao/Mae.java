@@ -15,6 +15,6 @@ public class Mae {
 
     public static void main(String[] args) {
 
-        Login.setVisible(true);
+
     }
 }
