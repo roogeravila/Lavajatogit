@@ -59,6 +59,13 @@ public class CadastroCliente extends javax.swing.JFrame {
         tfCancelar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
         lbBairro.setText("Bairro:");
 
@@ -93,6 +100,8 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         lbBairro1.setText("Nascimento:");
 
+        btSalvar.setBackground(new java.awt.Color(255, 128, 128));
+        btSalvar.setForeground(new java.awt.Color(255, 255, 255));
         btSalvar.setText("Salvar");
         btSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -106,6 +115,8 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         lbCelular.setText("Telefone 1:");
 
+        tfCancelar.setBackground(new java.awt.Color(255, 128, 128));
+        tfCancelar.setForeground(new java.awt.Color(255, 255, 255));
         tfCancelar.setText("Cancelar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -229,19 +240,12 @@ public class CadastroCliente extends javax.swing.JFrame {
 String Nome, Cpf,rg, cidade, endereco, bairro, dataNascimento       ;
 Nome = tfNomes.getText(); // pega o valor do campo de texto tfNomes e atribui a variavel nome
 Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atribui a variavel cpf
-        try {
-            
-            ConectaBanco();
-            String cad_cliente = tfNomes.getText();
-            enviar.executeUpdate("INSERT INTO Cad_Cliente(Nome,Cpf) VALUES (Nome,Cpf)"); //insere na tablea Cad_Cliente os Valores 
-            JOptionPane.showMessageDialog(this, "Cadastro efetuado com sucesso!!");
-            tfNomes.setText("");
-            conectar.close();
-
-        } catch (SQLException | HeadlessException e) {
-
-        }
+       
     }//GEN-LAST:event_btSalvarActionPerformed
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+    Mae.cadastro.setEnabled(true);            // quando a janela fechar tora a principal ativa novamente
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments
@@ -278,6 +282,7 @@ Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atri
         });
     }
 
+    
     public void ConectaBanco() {
         try {
             Class.forName("com.mysql.jdbc.Driver");

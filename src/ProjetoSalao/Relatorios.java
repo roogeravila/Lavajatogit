@@ -39,8 +39,13 @@ public class Relatorios extends javax.swing.JFrame {
         jcServicosParametro = new javax.swing.JComboBox();
         jcClientesParametro = new javax.swing.JComboBox();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 128, 128));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
@@ -80,7 +85,7 @@ public class Relatorios extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addComponent(jcTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jcClientesParametro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jcServicosParametro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -94,7 +99,7 @@ public class Relatorios extends javax.swing.JFrame {
                 .addComponent(tfTempoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(32, 32, 32)
                 .addComponent(btGerar)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addContainerGap(28, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,6 +156,10 @@ switch(ControleParametro){
     
 }
     }//GEN-LAST:event_jcTipoRelatorioActionPerformed
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+        Mae.Principal.setEnabled(true);
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments

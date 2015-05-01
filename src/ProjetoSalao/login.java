@@ -129,7 +129,9 @@ public class login extends javax.swing.JFrame {
 
     private void jpsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpsenhaActionPerformed
  char[] Senha = jpsenha.getPassword();
-       while(Senha.length < 3){
+ boolean entra = false;
+ 
+       if(Senha.length < 3){
            btEntrar.setEnabled(false);
            if (Senha.length >= 3){ 
                btEntrar.setEnabled(true);

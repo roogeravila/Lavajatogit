@@ -11,8 +11,8 @@ public class Mae {
     public static principal Principal = new principal();
     public static Cadastro cadastro = new Cadastro();
     public static CadastroCliente CadCliente = new CadastroCliente();
-    public static CadastrarServicoII CadCadServico = new CadastrarServicoII();
-
+    public static CadastrarServicoII CadServico = new CadastrarServicoII();
+    public static Relatorios relatorio  = new Relatorios();
     public static void main(String[] args) {
 
 

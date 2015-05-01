@@ -40,6 +40,13 @@ public class CadastrarServicoII extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
+
+        jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
         lbServico.setText("Serviço:");
 
@@ -159,6 +166,10 @@ public class CadastrarServicoII extends javax.swing.JFrame {
 
         }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+Mae.cadastro.setEnabled(true);            // quando a janela fechar torna a principal ativa novamente
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments

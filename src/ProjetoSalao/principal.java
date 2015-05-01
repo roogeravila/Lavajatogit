@@ -84,6 +84,11 @@ public class principal extends javax.swing.JFrame {
         btRelatorio.setText("Relatorios");
         btRelatorio.setBorderPainted(false);
         btRelatorio.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRelatorioActionPerformed(evt);
+            }
+        });
 
         btCaixa.setBackground(new java.awt.Color(-32640,true));
         btCaixa.setForeground(new java.awt.Color(-1,true));
@@ -111,7 +116,7 @@ public class principal extends javax.swing.JFrame {
         painel2.setLayout(painel2Layout);
         painel2Layout.setHorizontalGroup(
             painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 133, Short.MAX_VALUE)
+            .addGap(0, 856, Short.MAX_VALUE)
         );
         painel2Layout.setVerticalGroup(
             painel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,7 +148,7 @@ public class principal extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(painel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1409, 1409, 1409))
+                .addGap(686, 686, 686))
         );
         JPPrincipalLayout.setVerticalGroup(
             JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -172,7 +177,7 @@ public class principal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(JPPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, 1024, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -187,11 +192,9 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTAgendamentoActionPerformed
 
     private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
-        //desabilitando a tela atual
-        
-       // this.dispose();
+
         Mae.cadastro.setVisible(true);
-        this.setEnabled(false);
+        Mae.Principal.setEnabled(false);
     }//GEN-LAST:event_BTCadastrarActionPerformed
 
     private void BTCadastrarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_BTCadastrarComponentHidden
@@ -201,6 +204,11 @@ public class principal extends javax.swing.JFrame {
     private void BTCadastrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BTCadastrarMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_BTCadastrarMouseClicked
+
+    private void btRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRelatorioActionPerformed
+Mae.relatorio.setVisible(true);        
+Mae.Principal.setEnabled(false);
+    }//GEN-LAST:event_btRelatorioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -16,6 +16,8 @@ public class Cadastro extends javax.swing.JFrame {
      */
     public Cadastro() {
         initComponents();
+       
+        
     }
 
     
@@ -29,42 +31,19 @@ public class Cadastro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        btUsuario = new javax.swing.JButton();
-        btCliente = new javax.swing.JButton();
         btServico = new javax.swing.JButton();
-        jDpane = new javax.swing.JDesktopPane();
+        btCliente = new javax.swing.JButton();
+        btUsuario = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Cadastro ");
+        setBackground(new java.awt.Color(255, 255, 255));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosed(java.awt.event.WindowEvent evt) {
                 formWindowClosed(evt);
             }
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 formWindowClosing(evt);
-            }
-        });
-
-        jPanel1.setBackground(new java.awt.Color(255, 128, 128));
-        jPanel1.setFocusable(false);
-
-        btUsuario.setBackground(new java.awt.Color(255, 128, 128));
-        btUsuario.setForeground(new java.awt.Color(255, 255, 255));
-        btUsuario.setText("Usuário");
-        btUsuario.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btUsuarioActionPerformed(evt);
-            }
-        });
-
-        btCliente.setBackground(new java.awt.Color(255, 128, 128));
-        btCliente.setForeground(new java.awt.Color(255, 255, 255));
-        btCliente.setText("Cliente");
-        btCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        btCliente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btClienteActionPerformed(evt);
             }
         });
 
@@ -78,87 +57,76 @@ public class Cadastro extends javax.swing.JFrame {
             }
         });
 
-        jDpane.setBackground(new java.awt.Color(255, 255, 255));
+        btCliente.setBackground(new java.awt.Color(255, 128, 128));
+        btCliente.setForeground(new java.awt.Color(255, 255, 255));
+        btCliente.setText("Cliente");
+        btCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btClienteActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jDpaneLayout = new javax.swing.GroupLayout(jDpane);
-        jDpane.setLayout(jDpaneLayout);
-        jDpaneLayout.setHorizontalGroup(
-            jDpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 544, Short.MAX_VALUE)
-        );
-        jDpaneLayout.setVerticalGroup(
-            jDpaneLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btServico, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jDpane)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jDpane)
-                        .addContainerGap())
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(btUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(55, 55, 55)
-                        .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
-                        .addComponent(btServico, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25))))
-        );
+        btUsuario.setBackground(new java.awt.Color(255, 128, 128));
+        btUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        btUsuario.setText("Usuário");
+        btUsuario.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btUsuarioActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btServico, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(544, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(btUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(35, 35, 35)
+                .addComponent(btCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(btServico, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuarioActionPerformed
-   
-    }//GEN-LAST:event_btUsuarioActionPerformed
-
     private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
 
-    private void btClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClienteActionPerformed
-CadastroCliente x= new CadastroCliente();
-x.setVisible(true);
-    }//GEN-LAST:event_btClienteActionPerformed
-
-    private void btServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btServicoActionPerformed
-CadastrarServicoII y = new CadastrarServicoII();      
-y.setVisible(true);
-this.setEnabled(false);
-
-    }//GEN-LAST:event_btServicoActionPerformed
-
     private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
         Mae.Principal.setEnabled(true);
     }//GEN-LAST:event_formWindowClosing
+
+    private void btServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btServicoActionPerformed
+       Mae.CadServico.setVisible(true);
+    Mae.cadastro.setEnabled(false);    
+        
+    }//GEN-LAST:event_btServicoActionPerformed
+
+    private void btClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClienteActionPerformed
+    Mae.CadCliente.setVisible(true);
+    Mae.cadastro.setEnabled(false);    
+
+    }//GEN-LAST:event_btClienteActionPerformed
+
+    private void btUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuarioActionPerformed
+        
+    }//GEN-LAST:event_btUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,7 +169,5 @@ this.setEnabled(false);
     private javax.swing.JButton btCliente;
     private javax.swing.JButton btServico;
     private javax.swing.JButton btUsuario;
-    private javax.swing.JDesktopPane jDpane;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
