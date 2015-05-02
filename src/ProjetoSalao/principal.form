@@ -204,7 +204,7 @@
         <Container class="javax.swing.JPanel" name="painel2">
           <Properties>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Default"/>
+              <Color id="Cursor Padr&#xe3;o"/>
             </Property>
           </Properties>
 

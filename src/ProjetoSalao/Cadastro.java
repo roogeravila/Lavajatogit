@@ -7,7 +7,7 @@ package ProjetoSalao;
 
 /**
  *
- * @author Israel
+ * @author 
  */
 public class Cadastro extends javax.swing.JFrame {
 

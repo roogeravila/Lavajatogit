@@ -188,7 +188,8 @@ public class principal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void BTAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAgendamentoActionPerformed
-        // TODO add your handling code here:
+        Mae.agendamento.setVisible(true);
+        Mae.Principal.setEnabled(false);
     }//GEN-LAST:event_BTAgendamentoActionPerformed
 
     private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
@@ -242,7 +243,7 @@ Mae.Principal.setEnabled(false);
 
             public void run() {
                 new principal().setVisible(true);
-                new Cadastro().setVisible(false);
+                //new Cadastro().setVisible(false);
             }
         });
     }
