@@ -28,15 +28,23 @@ public class AgendarServico extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jlCliente = new javax.swing.JLabel();
-        jtCampoCliente = new javax.swing.JTextField();
-        jcServico = new javax.swing.JComboBox();
-        jlServico = new javax.swing.JLabel();
-        jbBuscar = new javax.swing.JButton();
-        jlData = new javax.swing.JLabel();
-        jdData = new com.toedter.calendar.JDateChooser();
+        uJPanelImagem1 = new componentes.UJPanelImagem();
+        jlCliente1 = new javax.swing.JLabel();
+        jtCampoCliente1 = new javax.swing.JTextField();
+        jbBuscar1 = new javax.swing.JButton();
+        jlServico1 = new javax.swing.JLabel();
+        jcServico1 = new javax.swing.JComboBox();
+        ValorServico1 = new javax.swing.JLabel();
+        campoValor1 = new javax.swing.JTextField();
+        jlData1 = new javax.swing.JLabel();
+        jdData1 = new com.toedter.calendar.JDateChooser();
+        tempoServico = new javax.swing.JLabel();
+        campoTempo = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 128, 128));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 Fechar(evt);
@@ -46,112 +54,176 @@ public class AgendarServico extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jlCliente.setBackground(new java.awt.Color(255, 128, 128));
-        jlCliente.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jlCliente.setForeground(new java.awt.Color(255, 255, 255));
-        jlCliente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlCliente.setText("Cliente :");
-        jlCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        uJPanelImagem1.setBackground(new java.awt.Color(255, 128, 128));
+        uJPanelImagem1.setImagem(new java.io.File("C:\\Users\\Israel\\Documents\\NetBeansProjects\\teste\\src\\ProjetoSalao\\customer-service-icon-psd-45721.jpg"));
 
-        jtCampoCliente.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jtCampoCliente.addActionListener(new java.awt.event.ActionListener() {
+        jlCliente1.setBackground(new java.awt.Color(255, 128, 128));
+        jlCliente1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlCliente1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlCliente1.setText("Cliente :");
+        jlCliente1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+
+        jtCampoCliente1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jtCampoCliente1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtCampoClienteActionPerformed(evt);
+                jtCampoCliente1ActionPerformed(evt);
             }
         });
 
-        jcServico.setBackground(new java.awt.Color(255, 128, 128));
-        jcServico.setForeground(new java.awt.Color(255, 255, 255));
-        jcServico.addActionListener(new java.awt.event.ActionListener() {
+        jbBuscar1.setBackground(new java.awt.Color(255, 128, 128));
+        jbBuscar1.setText("Buscar");
+
+        jlServico1.setBackground(new java.awt.Color(255, 128, 128));
+        jlServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlServico1.setText("Serviço : ");
+
+        jcServico1.setBackground(new java.awt.Color(255, 128, 128));
+        jcServico1.setForeground(new java.awt.Color(255, 255, 255));
+        jcServico1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jcServicoActionPerformed(evt);
+                jcServico1ActionPerformed(evt);
             }
         });
 
-        jlServico.setBackground(new java.awt.Color(255, 128, 128));
-        jlServico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jlServico.setForeground(new java.awt.Color(255, 255, 255));
-        jlServico.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlServico.setText("Serviço : ");
+        ValorServico1.setBackground(new java.awt.Color(255, 128, 128));
+        ValorServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        ValorServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ValorServico1.setText("Valor do Serviço:");
 
-        jbBuscar.setBackground(new java.awt.Color(255, 128, 128));
-        jbBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        jbBuscar.setText("Buscar");
+        jlData1.setBackground(new java.awt.Color(255, 128, 128));
+        jlData1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlData1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlData1.setText("Data :");
 
-        jlData.setBackground(new java.awt.Color(255, 128, 128));
-        jlData.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jlData.setForeground(new java.awt.Color(255, 255, 255));
-        jlData.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlData.setText("Data :");
+        tempoServico.setBackground(new java.awt.Color(255, 128, 128));
+        tempoServico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        tempoServico.setText("Tempo de Serviço: ");
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
+        jLabel1.setText("Agendar");
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
+        jLabel2.setText("Serviço");
+
+        javax.swing.GroupLayout uJPanelImagem1Layout = new javax.swing.GroupLayout(uJPanelImagem1);
+        uJPanelImagem1.setLayout(uJPanelImagem1Layout);
+        uJPanelImagem1Layout.setHorizontalGroup(
+            uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                        .addComponent(ValorServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                                .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(137, 137, 137))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, uJPanelImagem1Layout.createSequentialGroup()
+                                .addComponent(jlData1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(tempoServico)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addComponent(jlCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbBuscar1)
+                .addGap(28, 28, 28))
+            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(55, 55, 55))
+        );
+        uJPanelImagem1Layout.setVerticalGroup(
+            uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addGap(54, 54, 54)
+                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(tempoServico)
+                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlCliente1)
+                            .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jbBuscar1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(ValorServico1)
+                            .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlData1)
+                            .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(131, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jlCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlServico, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jlData, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jtCampoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 110, Short.MAX_VALUE)
-                        .addComponent(jbBuscar))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jcServico, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jdData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtCampoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlCliente)
-                    .addComponent(jbBuscar))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlServico, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jlData)
-                    .addComponent(jdData, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(218, Short.MAX_VALUE))
+            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtCampoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtCampoClienteActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtCampoClienteActionPerformed
-
-    private void jcServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcServicoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcServicoActionPerformed
-
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
         // TODO add your handling code here:
         Mae.agendamento.setVisible(true);
     }//GEN-LAST:event_Fechar
+
+    private void jtCampoCliente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtCampoCliente1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtCampoCliente1ActionPerformed
+
+    private void jcServico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcServico1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcServico1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -189,13 +261,20 @@ public class AgendarServico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel ValorServico1;
+    private javax.swing.JTextField campoTempo;
+    private javax.swing.JTextField campoValor1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JButton jbBuscar;
-    private javax.swing.JComboBox jcServico;
-    private com.toedter.calendar.JDateChooser jdData;
-    private javax.swing.JLabel jlCliente;
-    private javax.swing.JLabel jlData;
-    private javax.swing.JLabel jlServico;
-    private javax.swing.JTextField jtCampoCliente;
+    private javax.swing.JButton jbBuscar1;
+    private javax.swing.JComboBox jcServico1;
+    private com.toedter.calendar.JDateChooser jdData1;
+    private javax.swing.JLabel jlCliente1;
+    private javax.swing.JLabel jlData1;
+    private javax.swing.JLabel jlServico1;
+    private javax.swing.JTextField jtCampoCliente1;
+    private javax.swing.JLabel tempoServico;
+    private componentes.UJPanelImagem uJPanelImagem1;
     // End of variables declaration//GEN-END:variables
 }
