@@ -57,9 +57,9 @@
               <Group type="102" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="btServico" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                       <Component id="btCliente" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                       <Component id="btUsuario" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
+                      <Component id="btServico" alignment="0" min="-2" pref="109" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="598" max="32767" attributes="0"/>
               </Group>
@@ -68,13 +68,13 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="btServico" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                  <Component id="btCliente" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="btUsuario" min="-2" pref="53" max="-2" attributes="0"/>
-                  <EmptySpace pref="42" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+                  <Component id="btCliente" min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace pref="50" max="32767" attributes="0"/>
+                  <Component id="btServico" min="-2" pref="53" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
