@@ -55,13 +55,13 @@ public class AgendarServico extends javax.swing.JFrame {
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
 
         uJPanelImagem1.setBackground(new java.awt.Color(255, 128, 128));
-        uJPanelImagem1.setImagem(new java.io.File("C:\\Users\\Israel\\Documents\\NetBeansProjects\\teste\\src\\ProjetoSalao\\customer-service-icon-psd-45721.jpg"));
+        uJPanelImagem1.setImagem(new java.io.File("C:\\Users\\Israel\\Documents\\NetBeansProjects\\teste\\src\\ProjetoSalao\\service-icon-psd-45721.jpg"));
 
         jlCliente1.setBackground(new java.awt.Color(255, 128, 128));
         jlCliente1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlCliente1.setForeground(new java.awt.Color(255, 255, 255));
         jlCliente1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlCliente1.setText("Cliente :");
-        jlCliente1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         jtCampoCliente1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtCampoCliente1.addActionListener(new java.awt.event.ActionListener() {
@@ -71,10 +71,12 @@ public class AgendarServico extends javax.swing.JFrame {
         });
 
         jbBuscar1.setBackground(new java.awt.Color(255, 128, 128));
+        jbBuscar1.setForeground(new java.awt.Color(255, 255, 255));
         jbBuscar1.setText("Buscar");
 
         jlServico1.setBackground(new java.awt.Color(255, 128, 128));
         jlServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlServico1.setForeground(new java.awt.Color(255, 255, 255));
         jlServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlServico1.setText("Serviço : ");
 
@@ -88,11 +90,13 @@ public class AgendarServico extends javax.swing.JFrame {
 
         ValorServico1.setBackground(new java.awt.Color(255, 128, 128));
         ValorServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        ValorServico1.setForeground(new java.awt.Color(255, 255, 255));
         ValorServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         ValorServico1.setText("Valor do Serviço:");
 
         jlData1.setBackground(new java.awt.Color(255, 128, 128));
         jlData1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlData1.setForeground(new java.awt.Color(255, 255, 255));
         jlData1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlData1.setText("Data :");
 
@@ -100,12 +104,14 @@ public class AgendarServico extends javax.swing.JFrame {
         tempoServico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tempoServico.setText("Tempo de Serviço: ");
 
-        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setBackground(new java.awt.Color(255, 128, 128));
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Agendar");
 
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 128, 128));
         jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Serviço");
 
         javax.swing.GroupLayout uJPanelImagem1Layout = new javax.swing.GroupLayout(uJPanelImagem1);
@@ -113,40 +119,38 @@ public class AgendarServico extends javax.swing.JFrame {
         uJPanelImagem1Layout.setHorizontalGroup(
             uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(uJPanelImagem1Layout.createSequentialGroup()
-                        .addComponent(ValorServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(uJPanelImagem1Layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
-                                .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(137, 137, 137))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, uJPanelImagem1Layout.createSequentialGroup()
-                                .addComponent(jlData1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(tempoServico)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jlCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(284, Short.MAX_VALUE))
+                    .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                        .addComponent(jlData1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(tempoServico)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+                .addComponent(ValorServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
-                .addComponent(jlCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbBuscar1)
-                .addGap(28, 28, 28))
-            .addGroup(uJPanelImagem1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, uJPanelImagem1Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jbBuscar1)
+                    .addComponent(jLabel2))
                 .addGap(55, 55, 55))
         );
         uJPanelImagem1Layout.setVerticalGroup(
@@ -178,7 +182,7 @@ public class AgendarServico extends javax.swing.JFrame {
                         .addGroup(uJPanelImagem1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlData1)
                             .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(131, Short.MAX_VALUE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -189,24 +193,18 @@ public class AgendarServico extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(uJPanelImagem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(22, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
