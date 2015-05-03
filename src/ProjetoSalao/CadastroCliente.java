@@ -244,7 +244,7 @@ Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atri
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
-    Mae.cadastro.setEnabled(true);            // quando a janela fechar tora a principal ativa novamente
+     Mae.cadastro.setVisible(true);            // quando a janela fechar tora a principal ativa novamente
     }//GEN-LAST:event_Fechar
 
     /**

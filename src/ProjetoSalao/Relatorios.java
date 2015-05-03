@@ -158,7 +158,7 @@ switch(ControleParametro){
     }//GEN-LAST:event_jcTipoRelatorioActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
-        Mae.Principal.setEnabled(true);
+        Mae.Principal.setVisible(true);
     }//GEN-LAST:event_Fechar
 
     /**

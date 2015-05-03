@@ -43,7 +43,7 @@ public class Cadastro extends javax.swing.JFrame {
                 formWindowClosed(evt);
             }
             public void windowClosing(java.awt.event.WindowEvent evt) {
-                formWindowClosing(evt);
+                Fechar(evt);
             }
         });
 
@@ -108,19 +108,21 @@ public class Cadastro extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_formWindowClosed
 
-    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
-        Mae.Principal.setEnabled(true);
-    }//GEN-LAST:event_formWindowClosing
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+        Mae.Principal.setVisible(true);
+    }//GEN-LAST:event_Fechar
 
     private void btServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btServicoActionPerformed
        Mae.CadServico.setVisible(true);
-    Mae.cadastro.setEnabled(false);    
+       //Mae.cadastro.setEnabled(false);    
+       this.dispose();
         
     }//GEN-LAST:event_btServicoActionPerformed
 
     private void btClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClienteActionPerformed
     Mae.CadCliente.setVisible(true);
-    Mae.cadastro.setEnabled(false);    
+    //Mae.cadastro.setEnabled(false);    
+    this.dispose();
 
     }//GEN-LAST:event_btClienteActionPerformed
 

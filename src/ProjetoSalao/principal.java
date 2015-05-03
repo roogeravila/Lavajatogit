@@ -189,13 +189,13 @@ public class principal extends javax.swing.JFrame {
 
     private void BTAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAgendamentoActionPerformed
         Mae.agendamento.setVisible(true);
-        Mae.Principal.setEnabled(false);
+        this.dispose();
     }//GEN-LAST:event_BTAgendamentoActionPerformed
 
     private void BTCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCadastrarActionPerformed
 
         Mae.cadastro.setVisible(true);
-        Mae.Principal.setEnabled(false);
+        this.dispose();
     }//GEN-LAST:event_BTCadastrarActionPerformed
 
     private void BTCadastrarComponentHidden(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_BTCadastrarComponentHidden
@@ -207,8 +207,8 @@ public class principal extends javax.swing.JFrame {
     }//GEN-LAST:event_BTCadastrarMouseClicked
 
     private void btRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRelatorioActionPerformed
-Mae.relatorio.setVisible(true);        
-Mae.Principal.setEnabled(false);
+    Mae.relatorio.setVisible(true);        
+    this.dispose();
     }//GEN-LAST:event_btRelatorioActionPerformed
 
     /**

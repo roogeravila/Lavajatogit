@@ -36,7 +36,12 @@ public class AgendarServico extends javax.swing.JFrame {
         jlData = new javax.swing.JLabel();
         jdData = new com.toedter.calendar.JDateChooser();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,6 +147,11 @@ public class AgendarServico extends javax.swing.JFrame {
     private void jcServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcServicoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcServicoActionPerformed
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+        // TODO add your handling code here:
+        Mae.agendamento.setVisible(true);
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments

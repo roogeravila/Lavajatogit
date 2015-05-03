@@ -168,7 +168,7 @@ public class CadastrarServicoII extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
-Mae.cadastro.setEnabled(true);            // quando a janela fechar torna a principal ativa novamente
+    Mae.cadastro.setVisible(true);            // quando a janela fechar torna a principal ativa novamente
     }//GEN-LAST:event_Fechar
 
     /**

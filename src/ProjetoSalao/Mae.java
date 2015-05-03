@@ -14,6 +14,7 @@ public class Mae {
     public static CadastrarServicoII CadServico = new CadastrarServicoII();
     public static Relatorios relatorio  = new Relatorios();
     public static Agendamento agendamento = new Agendamento();
+    public static AgendarServico agendarservico = new AgendarServico();
     public static void main(String[] args) {
 
 

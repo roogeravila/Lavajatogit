@@ -28,22 +28,32 @@ public class Agendamento extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jbAgendar = new javax.swing.JButton();
+        jbAgendados = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
-        jButton1.setBackground(new java.awt.Color(255, 128, 128));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Agendar");
-        jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbAgendar.setBackground(new java.awt.Color(255, 128, 128));
+        jbAgendar.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgendar.setText("Agendar");
+        jbAgendar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbAgendar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAgendarActionPerformed(evt);
+            }
+        });
 
-        jButton2.setBackground(new java.awt.Color(255, 128, 128));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Agendados");
-        jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jbAgendados.setBackground(new java.awt.Color(255, 128, 128));
+        jbAgendados.setForeground(new java.awt.Color(255, 255, 255));
+        jbAgendados.setText("Agendados");
+        jbAgendados.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -52,17 +62,17 @@ public class Agendamento extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jbAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbAgendados, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(628, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(71, 71, 71)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbAgendar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jbAgendados, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(97, 97, 97))
         );
 
@@ -79,6 +89,18 @@ public class Agendamento extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgendarActionPerformed
+        // TODO add your handling code here:
+        Mae.agendarservico.setVisible(true);
+        this.dispose();
+        
+        
+    }//GEN-LAST:event_jbAgendarActionPerformed
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+    Mae.Principal.setVisible(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments
@@ -116,8 +138,8 @@ public class Agendamento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbAgendados;
+    private javax.swing.JButton jbAgendar;
     // End of variables declaration//GEN-END:variables
 }
