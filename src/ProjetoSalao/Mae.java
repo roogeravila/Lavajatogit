@@ -13,8 +13,10 @@ public class Mae {
     public static CadastroCliente CadCliente = new CadastroCliente();
     public static CadastrarServicoII CadServico = new CadastrarServicoII();
     public static Relatorios relatorio  = new Relatorios();
+    public static Configuracoes configura  = new Configuracoes();
+    public static RelClientesCadastrados Clientes = new RelClientesCadastrados();
     public static void main(String[] args) {
-
+    
 
     }
 }

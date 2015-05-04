@@ -11,6 +11,8 @@ package ProjetoSalao;
  */
 public class Relatorios extends javax.swing.JFrame {
 
+    int ControleParametro, controleII;
+
     /**
      * Creates new form Relatorios
      */
@@ -18,6 +20,7 @@ public class Relatorios extends javax.swing.JFrame {
         initComponents();
         jcServicosParametro.setVisible(false);
         jcClientesParametro.setVisible(false);
+        jcSetorServico.setVisible(false);
     }
 
     /**
@@ -31,13 +34,14 @@ public class Relatorios extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jcTipoRelatorio = new javax.swing.JComboBox();
-        tfTempoInicio = new javax.swing.JFormattedTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        tfTempoFinal = new javax.swing.JFormattedTextField();
+        lbPeriodoInicial = new javax.swing.JLabel();
+        lbPeriodoFinal = new javax.swing.JLabel();
         btGerar = new javax.swing.JButton();
         jcServicosParametro = new javax.swing.JComboBox();
         jcClientesParametro = new javax.swing.JComboBox();
+        jdPeriodoInicialRelatorio = new com.toedter.calendar.JDateChooser();
+        jdPeriodoFinalDataRelatorio = new com.toedter.calendar.JDateChooser();
+        jcSetorServico = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 128, 128));
@@ -56,27 +60,33 @@ public class Relatorios extends javax.swing.JFrame {
             }
         });
 
-        tfTempoInicio.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getDateInstance(java.text.DateFormat.MEDIUM))));
-        tfTempoInicio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tfTempoInicioActionPerformed(evt);
-            }
-        });
+        lbPeriodoInicial.setForeground(new java.awt.Color(255, 255, 255));
+        lbPeriodoInicial.setText("Periodo:");
 
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Periodo:");
-
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Até:");
+        lbPeriodoFinal.setForeground(new java.awt.Color(255, 255, 255));
+        lbPeriodoFinal.setText("Até:");
 
         btGerar.setBackground(new java.awt.Color(255, 128, 128));
         btGerar.setForeground(new java.awt.Color(255, 255, 255));
         btGerar.setText("Gerar");
         btGerar.setFocusPainted(false);
+        btGerar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btGerarActionPerformed(evt);
+            }
+        });
 
-        jcServicosParametro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cadastrados", "Executados", "Agendados" }));
+        jcServicosParametro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cadastrados", "Executados", "Agendados", "Setor" }));
+        jcServicosParametro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcServicosParametroActionPerformed(evt);
+            }
+        });
 
-        jcClientesParametro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cadastrados", "Agendados", "mais frequentes" }));
+        jcClientesParametro.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Cadastrados", "Agendados", "Setor" }));
+        jcClientesParametro.setToolTipText("Selecione aqui o tipo  de relatório.");
+
+        jcSetorServico.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -89,31 +99,35 @@ public class Relatorios extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jcClientesParametro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jcServicosParametro, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(56, 56, 56)
-                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfTempoInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jcSetorServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel2)
+                .addComponent(lbPeriodoInicial)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tfTempoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addComponent(jdPeriodoInicialRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lbPeriodoFinal)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jdPeriodoFinalDataRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(20, 20, 20)
                 .addComponent(btGerar)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jcTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tfTempoInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(tfTempoFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btGerar)
-                    .addComponent(jcClientesParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jcServicosParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jdPeriodoFinalDataRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jdPeriodoInicialRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jcTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbPeriodoInicial)
+                        .addComponent(lbPeriodoFinal)
+                        .addComponent(btGerar)
+                        .addComponent(jcClientesParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcServicosParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jcSetorServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(382, Short.MAX_VALUE))
         );
 
@@ -131,35 +145,66 @@ public class Relatorios extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void tfTempoInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTempoInicioActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tfTempoInicioActionPerformed
-
     private void jcTipoRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoRelatorioActionPerformed
-int ControleParametro = jcTipoRelatorio.getSelectedIndex();
-switch(ControleParametro){
-    case(0):{
-        jcServicosParametro.setVisible(true);
-        jcClientesParametro.setVisible(false);
-        break;
-    }
-    case(1):{
-        jcServicosParametro.setVisible(false);
-        jcClientesParametro.setVisible(true);
-        break;
-    }        
-    case(2):{
-        jcServicosParametro.setVisible(false);
-        jcClientesParametro.setVisible(false);
-        break;
-    }        
-    
-}
+        ControleParametro = jcTipoRelatorio.getSelectedIndex(); // criando uma variavel para receber o indice do Combobox TIPO Relatorio
+        switch (ControleParametro) { // faz um switch com o valor da variavel tipoRelatorio para exibir o outro combobox de acordo com a necessidade do cliente
+            case (0): {// caso seja selecionada a primeira opção do combobox torna visivel o outro CB referente ao tipo de relatorio de Serviço
+                jcServicosParametro.setVisible(true);
+                jcClientesParametro.setVisible(false);
+                jcSetorServico.setVisible(false);
+                jdPeriodoFinalDataRelatorio.setVisible(true);
+                jdPeriodoInicialRelatorio.setVisible(true);
+                lbPeriodoFinal.setVisible(true);
+                lbPeriodoInicial.setVisible(true);
+                break;
+            }
+            case (1): {// caso seja selecionada a segunda opção do combobox torna visivel o outro CB referente ao tipo de relatorio de Clients
+                jcServicosParametro.setVisible(false);
+                jcClientesParametro.setVisible(true);
+                jcSetorServico.setVisible(false);
+                jdPeriodoFinalDataRelatorio.setVisible(true);
+                jdPeriodoInicialRelatorio.setVisible(true);
+                lbPeriodoFinal.setVisible(true);
+                lbPeriodoInicial.setVisible(true);
+                break;
+            }
+            case (2): {
+                jcServicosParametro.setVisible(false);
+                jcClientesParametro.setVisible(false);
+                jcSetorServico.setVisible(false);
+                jdPeriodoFinalDataRelatorio.setVisible(true);
+                jdPeriodoInicialRelatorio.setVisible(true);
+                lbPeriodoFinal.setVisible(true);
+                lbPeriodoInicial.setVisible(true);
+
+                break;
+            }
+
+        }
     }//GEN-LAST:event_jcTipoRelatorioActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
         Mae.Principal.setEnabled(true);
     }//GEN-LAST:event_Fechar
+
+    private void btGerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btGerarActionPerformed
+
+        controleII = jcServicosParametro.getSelectedIndex();
+        if (ControleParametro == 1 && jcClientesParametro.getSelectedIndex() == 0) {
+            Mae.Clientes.setVisible(true);
+        }
+
+    }//GEN-LAST:event_btGerarActionPerformed
+
+    private void jcServicosParametroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcServicosParametroActionPerformed
+        if (ControleParametro == 0 && jcServicosParametro.getSelectedIndex() == 3) {
+            jcSetorServico.setVisible(true);
+            jdPeriodoFinalDataRelatorio.setVisible(false);
+            jdPeriodoInicialRelatorio.setVisible(false);
+            lbPeriodoFinal.setVisible(false);
+            lbPeriodoInicial.setVisible(false);
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jcServicosParametroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -192,20 +237,21 @@ switch(ControleParametro){
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Relatorios().setVisible(true);
-                
+
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btGerar;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JComboBox jcClientesParametro;
     private javax.swing.JComboBox jcServicosParametro;
+    private javax.swing.JComboBox jcSetorServico;
     private javax.swing.JComboBox jcTipoRelatorio;
-    private javax.swing.JFormattedTextField tfTempoFinal;
-    private javax.swing.JFormattedTextField tfTempoInicio;
+    private com.toedter.calendar.JDateChooser jdPeriodoFinalDataRelatorio;
+    private com.toedter.calendar.JDateChooser jdPeriodoInicialRelatorio;
+    private javax.swing.JLabel lbPeriodoFinal;
+    private javax.swing.JLabel lbPeriodoInicial;
     // End of variables declaration//GEN-END:variables
 }

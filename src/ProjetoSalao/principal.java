@@ -103,6 +103,11 @@ public class principal extends javax.swing.JFrame {
         btConfig.setAlignmentY(0.0F);
         btConfig.setBorderPainted(false);
         btConfig.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btConfig.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConfigActionPerformed(evt);
+            }
+        });
 
         jLabel4.setForeground(new java.awt.Color(-1,true));
         jLabel4.setText("Usuario Ativo:");
@@ -209,6 +214,11 @@ public class principal extends javax.swing.JFrame {
 Mae.relatorio.setVisible(true);        
 Mae.Principal.setEnabled(false);
     }//GEN-LAST:event_btRelatorioActionPerformed
+
+    private void btConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConfigActionPerformed
+Mae.configura.setVisible(true);
+Mae.Principal.setEnabled(false);// TODO add your handling code here:
+    }//GEN-LAST:event_btConfigActionPerformed
 
     /**
      * @param args the command line arguments

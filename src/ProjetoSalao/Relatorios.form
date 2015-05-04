@@ -57,17 +57,19 @@
                       <Component id="jcClientesParametro" max="32767" attributes="0"/>
                       <Component id="jcServicosParametro" max="32767" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="tfTempoInicio" min="-2" pref="77" max="-2" attributes="0"/>
+                  <Component id="jcSetorServico" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="lbPeriodoInicial" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="tfTempoFinal" min="-2" pref="77" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Component id="jdPeriodoInicialRelatorio" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbPeriodoFinal" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jdPeriodoFinalDataRelatorio" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                   <Component id="btGerar" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="28" max="32767" attributes="0"/>
+                  <EmptySpace pref="46" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -75,15 +77,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jcTipoRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfTempoInicio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="tfTempoFinal" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="btGerar" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jcClientesParametro" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jcServicosParametro" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jdPeriodoFinalDataRelatorio" min="-2" max="-2" attributes="0"/>
+                      <Component id="jdPeriodoInicialRelatorio" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jcTipoRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPeriodoInicial" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbPeriodoFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="btGerar" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcClientesParametro" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcServicosParametro" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jcSetorServico" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                   <EmptySpace pref="382" max="32767" attributes="0"/>
               </Group>
@@ -105,17 +110,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcTipoRelatorioActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JFormattedTextField" name="tfTempoInicio">
-          <Properties>
-            <Property name="formatterFactory" type="javax.swing.JFormattedTextField$AbstractFormatterFactory" editor="org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor">
-              <Format subtype="2" type="1"/>
-            </Property>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfTempoInicioActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JLabel" name="jLabel1">
+        <Component class="javax.swing.JLabel" name="lbPeriodoInicial">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -123,15 +118,13 @@
             <Property name="text" type="java.lang.String" value="Periodo:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="jLabel2">
+        <Component class="javax.swing.JLabel" name="lbPeriodoFinal">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="At&#xe9;:"/>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JFormattedTextField" name="tfTempoFinal">
         </Component>
         <Component class="javax.swing.JButton" name="btGerar">
           <Properties>
@@ -144,17 +137,24 @@
             <Property name="text" type="java.lang.String" value="Gerar"/>
             <Property name="focusPainted" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btGerarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="jcServicosParametro">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="3">
+              <StringArray count="4">
                 <StringItem index="0" value="Cadastrados"/>
                 <StringItem index="1" value="Executados"/>
                 <StringItem index="2" value="Agendados"/>
+                <StringItem index="3" value="Setor"/>
               </StringArray>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jcServicosParametroActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JComboBox" name="jcClientesParametro">
           <Properties>
@@ -162,7 +162,23 @@
               <StringArray count="3">
                 <StringItem index="0" value="Cadastrados"/>
                 <StringItem index="1" value="Agendados"/>
-                <StringItem index="2" value="mais frequentes"/>
+                <StringItem index="2" value="Setor"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="Selecione aqui o tipo  de relat&#xf3;rio."/>
+          </Properties>
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jdPeriodoInicialRelatorio">
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="jdPeriodoFinalDataRelatorio">
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jcSetorServico">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="1"/>
+                <StringItem index="1" value="2"/>
+                <StringItem index="2" value="3"/>
               </StringArray>
             </Property>
           </Properties>
