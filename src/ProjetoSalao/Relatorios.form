@@ -61,13 +61,9 @@
                   <Component id="jcSetorServico" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="lbPeriodoInicial" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jdPeriodoInicialRelatorio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
                   <Component id="lbPeriodoFinal" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jdPeriodoFinalDataRelatorio" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                   <Component id="btGerar" min="-2" max="-2" attributes="0"/>
                   <EmptySpace pref="46" max="32767" attributes="0"/>
               </Group>
@@ -77,18 +73,14 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jdPeriodoFinalDataRelatorio" min="-2" max="-2" attributes="0"/>
-                      <Component id="jdPeriodoInicialRelatorio" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jcTipoRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPeriodoInicial" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="lbPeriodoFinal" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="btGerar" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jcClientesParametro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jcServicosParametro" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jcSetorServico" alignment="3" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jcTipoRelatorio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbPeriodoInicial" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbPeriodoFinal" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="btGerar" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcClientesParametro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcServicosParametro" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jcSetorServico" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="382" max="32767" attributes="0"/>
               </Group>
@@ -167,10 +159,6 @@
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Selecione aqui o tipo  de relat&#xf3;rio."/>
           </Properties>
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jdPeriodoInicialRelatorio">
-        </Component>
-        <Component class="com.toedter.calendar.JDateChooser" name="jdPeriodoFinalDataRelatorio">
         </Component>
         <Component class="javax.swing.JComboBox" name="jcSetorServico">
           <Properties>

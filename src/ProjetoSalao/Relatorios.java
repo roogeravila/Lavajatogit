@@ -39,8 +39,6 @@ public class Relatorios extends javax.swing.JFrame {
         btGerar = new javax.swing.JButton();
         jcServicosParametro = new javax.swing.JComboBox();
         jcClientesParametro = new javax.swing.JComboBox();
-        jdPeriodoInicialRelatorio = new com.toedter.calendar.JDateChooser();
-        jdPeriodoFinalDataRelatorio = new com.toedter.calendar.JDateChooser();
         jcSetorServico = new javax.swing.JComboBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -103,13 +101,9 @@ public class Relatorios extends javax.swing.JFrame {
                 .addComponent(jcSetorServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbPeriodoInicial)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jdPeriodoInicialRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(46, 46, 46)
                 .addComponent(lbPeriodoFinal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jdPeriodoFinalDataRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20)
+                .addGap(62, 62, 62)
                 .addComponent(btGerar)
                 .addContainerGap(46, Short.MAX_VALUE))
         );
@@ -117,17 +111,14 @@ public class Relatorios extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jdPeriodoFinalDataRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jdPeriodoInicialRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jcTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbPeriodoInicial)
-                        .addComponent(lbPeriodoFinal)
-                        .addComponent(btGerar)
-                        .addComponent(jcClientesParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jcServicosParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jcSetorServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jcTipoRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbPeriodoInicial)
+                    .addComponent(lbPeriodoFinal)
+                    .addComponent(btGerar)
+                    .addComponent(jcClientesParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcServicosParametro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcSetorServico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(382, Short.MAX_VALUE))
         );
 
@@ -249,8 +240,6 @@ public class Relatorios extends javax.swing.JFrame {
     private javax.swing.JComboBox jcServicosParametro;
     private javax.swing.JComboBox jcSetorServico;
     private javax.swing.JComboBox jcTipoRelatorio;
-    private com.toedter.calendar.JDateChooser jdPeriodoFinalDataRelatorio;
-    private com.toedter.calendar.JDateChooser jdPeriodoInicialRelatorio;
     private javax.swing.JLabel lbPeriodoFinal;
     private javax.swing.JLabel lbPeriodoInicial;
     // End of variables declaration//GEN-END:variables
