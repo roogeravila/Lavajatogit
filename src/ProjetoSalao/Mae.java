@@ -15,6 +15,7 @@ public class Mae {
     public static Relatorios relatorio  = new Relatorios();
     public static Agendamento agendamento = new Agendamento();
     public static AgendarServico agendarservico = new AgendarServico();
+    public static Usuario usuario = new Usuario();
     public static void main(String[] args) {
 
 

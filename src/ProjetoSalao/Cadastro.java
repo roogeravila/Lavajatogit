@@ -57,6 +57,11 @@ public class Cadastro extends javax.swing.JFrame {
         btUsuario.setMaximumSize(null);
         btUsuario.setMinimumSize(null);
         btUsuario.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btUsuarioActionPerformed(evt);
+            }
+        });
 
         btCliente.setBackground(new java.awt.Color(255, 128, 128));
         btCliente.setForeground(new java.awt.Color(255, 255, 255));
@@ -64,6 +69,11 @@ public class Cadastro extends javax.swing.JFrame {
         btCliente.setMaximumSize(null);
         btCliente.setMinimumSize(null);
         btCliente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btClienteActionPerformed(evt);
+            }
+        });
 
         btServico.setBackground(new java.awt.Color(255, 128, 128));
         btServico.setForeground(new java.awt.Color(255, 255, 255));
@@ -71,6 +81,11 @@ public class Cadastro extends javax.swing.JFrame {
         btServico.setMaximumSize(null);
         btServico.setMinimumSize(null);
         btServico.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        btServico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btServicoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -117,6 +132,24 @@ public class Cadastro extends javax.swing.JFrame {
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
         Mae.Principal.setVisible(true);
     }//GEN-LAST:event_Fechar
+
+    private void btClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btClienteActionPerformed
+               // TODO add your handling code here:
+        Mae.CadCliente.setVisible(true); 
+        this.dispose();
+    }//GEN-LAST:event_btClienteActionPerformed
+
+    private void btUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btUsuarioActionPerformed
+        // TODO add your handling code here:
+        Mae.usuario.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btUsuarioActionPerformed
+
+    private void btServicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btServicoActionPerformed
+        // TODO add your handling code here:
+        Mae.CadServico.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btServicoActionPerformed
 
     /**
      * @param args the command line arguments

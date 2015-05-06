@@ -32,9 +32,15 @@ public class Usuario extends javax.swing.JFrame {
         campoUsuario = new javax.swing.JTextField();
         jlCpf = new javax.swing.JLabel();
         campoCpf = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
+        Rg = new javax.swing.JLabel();
+        campoRg = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                Fechar(evt);
+            }
+        });
 
         PainelUsuario.setBackground(new java.awt.Color(255, 128, 128));
         PainelUsuario.setForeground(new java.awt.Color(255, 255, 255));
@@ -51,11 +57,11 @@ public class Usuario extends javax.swing.JFrame {
         jlCpf.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlCpf.setText("CPF:");
 
-        jLabel1.setBackground(new java.awt.Color(255, 128, 128));
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("RG:");
+        Rg.setBackground(new java.awt.Color(255, 128, 128));
+        Rg.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        Rg.setForeground(new java.awt.Color(255, 255, 255));
+        Rg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Rg.setText("RG:");
 
         javax.swing.GroupLayout PainelUsuarioLayout = new javax.swing.GroupLayout(PainelUsuario);
         PainelUsuario.setLayout(PainelUsuarioLayout);
@@ -67,14 +73,16 @@ public class Usuario extends javax.swing.JFrame {
                         .addContainerGap()
                         .addGroup(PainelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jlCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(PainelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(campoCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(PainelUsuarioLayout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Rg, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(PainelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(campoUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 394, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(PainelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(campoRg, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(campoCpf, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)))
                 .addContainerGap(81, Short.MAX_VALUE))
         );
         PainelUsuarioLayout.setVerticalGroup(
@@ -89,8 +97,10 @@ public class Usuario extends javax.swing.JFrame {
                     .addComponent(jlCpf)
                     .addComponent(campoCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addContainerGap(223, Short.MAX_VALUE))
+                .addGroup(PainelUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Rg)
+                    .addComponent(campoRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -106,6 +116,12 @@ public class Usuario extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
+        // TODO add your handling code here:
+        Mae.cadastro.setVisible(true);
+        
+    }//GEN-LAST:event_Fechar
 
     /**
      * @param args the command line arguments
@@ -144,9 +160,10 @@ public class Usuario extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PainelUsuario;
+    private javax.swing.JLabel Rg;
     private javax.swing.JTextField campoCpf;
+    private javax.swing.JTextField campoRg;
     private javax.swing.JTextField campoUsuario;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jlCpf;
     private javax.swing.JLabel usuario;
     // End of variables declaration//GEN-END:variables
