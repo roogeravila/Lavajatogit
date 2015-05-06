@@ -48,16 +48,22 @@ public class CadastrarServicoII extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
+        lbServico.setForeground(new java.awt.Color(255, 255, 255));
         lbServico.setText("Serviço:");
 
+        lbSetor.setForeground(new java.awt.Color(255, 255, 255));
         lbSetor.setText("Setor:");
 
+        lbTempoMedio.setForeground(new java.awt.Color(255, 255, 255));
         lbTempoMedio.setText("Tempo Médio:");
 
+        lbPreco.setForeground(new java.awt.Color(255, 255, 255));
         lbPreco.setText("Preço:");
 
         jcSetor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 Salão", "2 Unhas", "3 Studio" }));
 
+        jButton1.setBackground(new java.awt.Color(255, 128, 128));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Salvar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -65,6 +71,8 @@ public class CadastrarServicoII extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 128, 128));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Cancelar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

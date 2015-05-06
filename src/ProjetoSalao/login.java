@@ -11,10 +11,13 @@ package ProjetoSalao;
  */
 public class login extends javax.swing.JFrame {
 
+    int TamanhoSenha;
+
     /**
      * Creates new form login
      */
     public login() {
+
         initComponents();
     }
 
@@ -33,6 +36,7 @@ public class login extends javax.swing.JFrame {
         jtNomeUsuario = new javax.swing.JTextField();
         jpsenha = new javax.swing.JPasswordField();
         btEntrar = new javax.swing.JButton();
+        lbMensagem = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,7 +70,9 @@ public class login extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText(" ");
+        lbMensagem.setText(" ");
+
+        jLabel1.setText("FALTA IMPLEMENTAR REQUISITO TAMANHO SENHA !!!!!!!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -76,25 +82,31 @@ public class login extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ljusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jlsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jpsenha)))
+                        .addComponent(jpsenha))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(ljusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                 .addComponent(btEntrar)
                 .addGap(45, 45, 45))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(100, 100, 100)
+                .addComponent(lbMensagem, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(73, 73, 73)
+                .addGap(19, 19, 19)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ljusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -104,7 +116,7 @@ public class login extends javax.swing.JFrame {
                     .addComponent(jpsenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btEntrar))
                 .addGap(31, 31, 31)
-                .addComponent(jLabel1)
+                .addComponent(lbMensagem)
                 .addContainerGap(97, Short.MAX_VALUE))
         );
 
@@ -123,22 +135,26 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
-       Mae.Principal.setVisible(true);
-       this.dispose();
+Mae.Principal.setVisible(true);
+                this.dispose();
     }//GEN-LAST:event_btEntrarActionPerformed
 
     private void jpsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpsenhaActionPerformed
- char[] Senha = jpsenha.getPassword();
- boolean entra = false;
- 
-       if(Senha.length < 3){
-           btEntrar.setEnabled(false);
-           if (Senha.length >= 3){ 
-               btEntrar.setEnabled(true);
+        TamanhoSenha = jpsenha.getColumns();
+        while (TamanhoSenha < 3) {
+            TamanhoSenha = jpsenha.getColumns();
+            lbMensagem.setText("Senha Curta !");
+        }
+        if (TamanhoSenha < 3) {
+            btEntrar.setEnabled(false);
+             
+            if (TamanhoSenha >= 3) {
+                btEntrar.setEnabled(true);
+                
+                // verificar se senha inserida menor que 4 desabilita botao entrar 
+            }
+        }
 
-               // verificar se senha inserida menor que 4 desabilita botao entrar 
-           }
-       } 
     }//GEN-LAST:event_jpsenhaActionPerformed
 
     /**
@@ -183,6 +199,7 @@ public class login extends javax.swing.JFrame {
     private javax.swing.JLabel jlsenha;
     private javax.swing.JPasswordField jpsenha;
     private javax.swing.JTextField jtNomeUsuario;
+    private javax.swing.JLabel lbMensagem;
     private javax.swing.JLabel ljusuario;
     // End of variables declaration//GEN-END:variables
 }
