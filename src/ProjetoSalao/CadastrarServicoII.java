@@ -5,6 +5,11 @@
  */
 package ProjetoSalao;
 
+import static ProjetoSalao.CadastroCliente.conectar;
+import java.awt.HeadlessException;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Dev
@@ -153,18 +158,17 @@ public class CadastrarServicoII extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         //chama o metodo conectar e insere
         try{
-            Banco.ConectaBanco();
-            String nomeServico = tfServico.getText();
-            String Valor = tfPreco.getText();
-            String tempo = tfTempo.getText();
-            int Setor = jcSetor.getSelectedIndex();
-            Banco.cadastra("INSERT INTO Servico (Servico,Valor_Serv,Temp_Med_Serv,Setor) VALUES (nomeServico,Valor,tempo,Setor");
-            //("INSERT INTO Servico (Servico)VALUES ('"+nomeServico+"')");
-            //INSERT INTO Servico (Servico,Valor_Serv,Temp_Med_Serv) VALUES (tfServico.getText(),(double)tfPreco.getText(),tfTempo.getText(),jcSetor.getSelectedIndex());
-        }
-        catch(Exception e){
+         int Setor = jcSetor.getSelectedIndex()+1;
+            Banco.cadastra("INSERT INTO servico (Servico,Valor,Tempo_Med_Serv,Setor) VALUES ('" + tfServico.getText() + "','" + tfPreco.getText() + "','" + tfTempo.getText() + "','" + Setor+ "')");
+            JOptionPane.showMessageDialog(this, "Servico Cadastrado Com Sucesso!");
+            tfPreco.setText("");
+            tfServico.setText("");
+            tfTempo.setText("");
+
 
         }
+       catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Erro ao salvar os dados!!!");}
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
