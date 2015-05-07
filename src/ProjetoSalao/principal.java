@@ -34,7 +34,6 @@ public class principal extends javax.swing.JFrame {
         BTCadastrar = new javax.swing.JButton();
         BTAgendamento = new javax.swing.JButton();
         btRelatorio = new javax.swing.JButton();
-        btCaixa = new javax.swing.JButton();
         btConfig = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -89,13 +88,6 @@ public class principal extends javax.swing.JFrame {
             }
         });
 
-        btCaixa.setBackground(new java.awt.Color(-32640,true));
-        btCaixa.setForeground(new java.awt.Color(-1,true));
-        btCaixa.setText("Caixa");
-        btCaixa.setAlignmentY(0.0F);
-        btCaixa.setBorderPainted(false);
-        btCaixa.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-
         btConfig.setBackground(new java.awt.Color(-32640,true));
         btConfig.setForeground(new java.awt.Color(-1,true));
         btConfig.setText("Configurações");
@@ -116,7 +108,6 @@ public class principal extends javax.swing.JFrame {
             .addGroup(JPPrincipalLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTAgendamento, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(BTCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -139,10 +130,8 @@ public class principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(btRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btCaixa, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btConfig, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
+                .addGap(103, 103, 103)
                 .addGroup(JPPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jLabel5))
@@ -227,7 +216,6 @@ public class principal extends javax.swing.JFrame {
     private javax.swing.JButton BTAgendamento;
     private javax.swing.JButton BTCadastrar;
     private javax.swing.JPanel JPPrincipal;
-    private javax.swing.JButton btCaixa;
     private javax.swing.JButton btConfig;
     private javax.swing.JButton btRelatorio;
     private javax.swing.JLabel jLabel4;
