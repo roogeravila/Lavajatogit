@@ -5,11 +5,18 @@
  */
 package ProjetoSalao;
 
+import java.sql.*;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Dev
  */
 public class login extends javax.swing.JFrame {
+
+    static Connection conectar;
+    static Statement enviar;
+    static ResultSet pegar;
 
     /**
      * Creates new form login
@@ -35,7 +42,7 @@ public class login extends javax.swing.JFrame {
         btEntrar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
 
@@ -73,23 +80,24 @@ public class login extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ljusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(48, 48, 48)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(ljusuario, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jtNomeUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jlsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jpsenha)))
+                        .addGap(43, 43, 43)
+                        .addComponent(btEntrar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jlsenha, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jpsenha)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-                .addComponent(btEntrar)
-                .addGap(45, 45, 45))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(156, 156, 156)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(156, 156, 156)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,22 +131,32 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btEntrarActionPerformed
-       Mae.Principal.setVisible(true);
-       this.dispose();
+        char[] senhajj = jpsenha.getPassword();
+        String senhajp = String.valueOf(senhajj);
+        try {
+            ConectaBanco();
+            enviar = conectar.createStatement();
+            String sql = "SELECT * FROM login";
+            pegar = enviar.executeQuery(sql);
+            pegar.first();
+
+            if (jtNomeUsuario.getText().equals(pegar.getString("LoginNome"))
+                    && senhajp.equals(pegar.getString("LoginSenha"))) {
+                Mae.Principal.setVisible(true);
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Usuario ou Senha incorreto!!");
+            }
+        } catch (SQLException e) {
+            JOptionPane.showMessageDialog(this, "Problema de codigo para efetuar o login!");
+        }
+
+
     }//GEN-LAST:event_btEntrarActionPerformed
 
     private void jpsenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jpsenhaActionPerformed
- char[] Senha = jpsenha.getPassword();
- boolean entra = false;
- 
-       if(Senha.length < 3){
-           btEntrar.setEnabled(false);
-           if (Senha.length >= 3){ 
-               btEntrar.setEnabled(true);
 
-               // verificar se senha inserida menor que 4 desabilita botao entrar 
-           }
-       } 
+
     }//GEN-LAST:event_jpsenhaActionPerformed
 
     /**
@@ -176,6 +194,16 @@ public class login extends javax.swing.JFrame {
         });
     }
 
+    public void ConectaBanco() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conectar = DriverManager.getConnection("jdbc:mysql://localhost:3306/bdsalao", "adm", "adm");
+            enviar = conectar.createStatement();
+            System.out.println("Banco de dados conectado com sucesso!");
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Banco de dados não conectado!");
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEntrar;
     private javax.swing.JLabel jLabel1;

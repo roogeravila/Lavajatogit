@@ -7,6 +7,9 @@ package ProjetoSalao;
 
 import java.awt.HeadlessException;
 import java.sql.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.swing.JOptionPane;
 
 /**
@@ -49,7 +52,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         tfRg = new javax.swing.JTextField();
         lbEnd = new javax.swing.JLabel();
         tfBairro = new javax.swing.JTextField();
-        tfNascimento = new javax.swing.JTextField();
         lbBairro1 = new javax.swing.JLabel();
         btSalvar = new javax.swing.JButton();
         lbCidade = new javax.swing.JLabel();
@@ -57,6 +59,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         tfTelefone1 = new javax.swing.JTextField();
         lbCelular = new javax.swing.JLabel();
         tfCancelar = new javax.swing.JButton();
+        tfNascimento = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -80,8 +83,6 @@ public class CadastroCliente extends javax.swing.JFrame {
                 tfNomesActionPerformed(evt);
             }
         });
-
-        tfTelefone2.setText("99999-9999");
 
         lbRG.setText("RG:");
 
@@ -111,13 +112,13 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         lbCidade.setText("Cidade:");
 
-        tfTelefone1.setText("00000-0000");
-
         lbCelular.setText("Telefone 1:");
 
         tfCancelar.setBackground(new java.awt.Color(255, 128, 128));
         tfCancelar.setForeground(new java.awt.Color(255, 255, 255));
         tfCancelar.setText("Cancelar");
+
+        tfNascimento.setText("00/00/1900");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -127,37 +128,13 @@ public class CadastroCliente extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(lbCelular)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfTelefone1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(24, 24, 24)
-                        .addComponent(lbCelular1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfTelefone2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbRG)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfRg))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(lbCidade)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(lbBairro)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfBairro, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lbBairro1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tfEmail)
-                        .addGap(29, 29, 29)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lbCPF)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tfCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tfCpf, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbNome)
@@ -165,7 +142,36 @@ public class CadastroCliente extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(tfEndereco)
-                            .addComponent(tfNomes))))
+                            .addComponent(tfNomes)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lbCidade)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfCidade, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbBairro))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(lbCelular)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfTelefone1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lbCelular1)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(0, 13, Short.MAX_VALUE)
+                                .addComponent(tfBairro, javax.swing.GroupLayout.DEFAULT_SIZE, 81, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbBairro1))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(tfTelefone2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(lbRG)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tfRg)
+                            .addComponent(tfNascimento, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE))))
                 .addGap(45, 45, 45))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(151, 151, 151)
@@ -218,7 +224,7 @@ public class CadastroCliente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -237,14 +243,30 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_tfCpfActionPerformed
 
     private void btSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSalvarActionPerformed
-String Nome, Cpf,rg, cidade, endereco, bairro, dataNascimento       ;
-Nome = tfNomes.getText(); // pega o valor do campo de texto tfNomes e atribui a variavel nome
-Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atribui a variavel cpf
-       
+        try {
+            ConectaBanco();
+            enviar.executeUpdate("INSERT INTO Cad_Cliente(Nome, Endereco, Cpf, Rg, Cidade, Bairro, Telefone1, Telefone2, Email, Data_Nascimento) VALUES ('" + tfNomes.getText() + "','" + tfEndereco.getText() + "','" + tfCpf.getText() + "','" + tfRg.getText() + "','" + tfCidade.getText() + "','" + tfBairro.getText() + "','" + tfTelefone1.getText() + "','" + tfTelefone2.getText() + "','" + tfEmail.getText() + "','" + tfNascimento.getText() + "')");
+            JOptionPane.showMessageDialog(this, "Os dados foram salvos!!!");
+            tfNomes.setText("");
+            tfEndereco.setText("");
+            tfCpf.setText("");
+            tfRg.setText("");
+            tfCidade.setText("");
+            tfBairro.setText("");
+            tfTelefone1.setText("");
+            tfTelefone2.setText("");
+            tfEmail.setText("");
+            tfNascimento.setText("");
+            conectar.close();
+
+        } catch (SQLException | HeadlessException e) {
+            JOptionPane.showMessageDialog(this, "Erro ao salvar os dados!!!");
+        }
+
     }//GEN-LAST:event_btSalvarActionPerformed
 
     private void Fechar(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_Fechar
-     Mae.cadastro.setVisible(true);            // quando a janela fechar tora a principal ativa novamente
+        Mae.cadastro.setEnabled(true);            // quando a janela fechar tora a principal ativa novamente
     }//GEN-LAST:event_Fechar
 
     /**
@@ -282,7 +304,6 @@ Cpf = tfCpf.getText(); // pega o valor do campo de texto respectivo a cpf e atri
         });
     }
 
-    
     public void ConectaBanco() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
