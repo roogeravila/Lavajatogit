@@ -33,17 +33,20 @@ public class AgendarServico extends javax.swing.JFrame {
         jbBuscar1 = new javax.swing.JButton();
         jlServico1 = new javax.swing.JLabel();
         jcServico1 = new javax.swing.JComboBox();
-        ValorServico1 = new javax.swing.JLabel();
-        campoValor1 = new javax.swing.JTextField();
         jlData1 = new javax.swing.JLabel();
         jdData1 = new com.toedter.calendar.JDateChooser();
         tempoServico = new javax.swing.JLabel();
         campoTempo = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jlCliente2 = new javax.swing.JLabel();
+        campoValor2 = new javax.swing.JTextField();
+        jlCliente3 = new javax.swing.JLabel();
+        campoValor3 = new javax.swing.JTextField();
+        jbBuscar2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 128, 128));
+        setMaximumSize(new java.awt.Dimension(416, 282));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 Fechar(evt);
@@ -52,12 +55,15 @@ public class AgendarServico extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 128, 128));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel1.setMaximumSize(new java.awt.Dimension(416, 282));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jlCliente1.setBackground(new java.awt.Color(255, 128, 128));
         jlCliente1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jlCliente1.setForeground(new java.awt.Color(255, 255, 255));
         jlCliente1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlCliente1.setText("Cliente :");
+        jPanel1.add(jlCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 128, 70, -1));
 
         jtCampoCliente1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jtCampoCliente1.addActionListener(new java.awt.event.ActionListener() {
@@ -65,16 +71,19 @@ public class AgendarServico extends javax.swing.JFrame {
                 jtCampoCliente1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jtCampoCliente1, new org.netbeans.lib.awtextra.AbsoluteConstraints(82, 128, 326, -1));
 
         jbBuscar1.setBackground(new java.awt.Color(255, 128, 128));
         jbBuscar1.setForeground(new java.awt.Color(255, 255, 255));
-        jbBuscar1.setText("Buscar");
+        jbBuscar1.setText("Confirma");
+        jPanel1.add(jbBuscar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, -1, -1));
 
         jlServico1.setBackground(new java.awt.Color(255, 128, 128));
         jlServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jlServico1.setForeground(new java.awt.Color(255, 255, 255));
         jlServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlServico1.setText("Serviço : ");
+        jPanel1.add(jlServico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 159, 77, 22));
 
         jcServico1.setBackground(new java.awt.Color(255, 128, 128));
         jcServico1.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,113 +92,65 @@ public class AgendarServico extends javax.swing.JFrame {
                 jcServico1ActionPerformed(evt);
             }
         });
-
-        ValorServico1.setBackground(new java.awt.Color(255, 128, 128));
-        ValorServico1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        ValorServico1.setForeground(new java.awt.Color(255, 255, 255));
-        ValorServico1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        ValorServico1.setText("Valor do Serviço:");
+        jPanel1.add(jcServico1, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 161, 182, -1));
 
         jlData1.setBackground(new java.awt.Color(255, 128, 128));
         jlData1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jlData1.setForeground(new java.awt.Color(255, 255, 255));
         jlData1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlData1.setText("Data :");
+        jPanel1.add(jlData1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 192, 77, -1));
+        jPanel1.add(jdData1, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 192, 126, -1));
 
         tempoServico.setBackground(new java.awt.Color(255, 128, 128));
         tempoServico.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         tempoServico.setText("Tempo de Serviço: ");
+        jPanel1.add(tempoServico, new org.netbeans.lib.awtextra.AbsoluteConstraints(149, 93, -1, -1));
+        jPanel1.add(campoTempo, new org.netbeans.lib.awtextra.AbsoluteConstraints(264, 91, 125, -1));
 
         jLabel1.setBackground(new java.awt.Color(255, 128, 128));
         jLabel1.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Agendar");
+        jLabel1.setText("Agendamento");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 11, -1, 56));
 
-        jLabel2.setBackground(new java.awt.Color(255, 128, 128));
-        jLabel2.setFont(new java.awt.Font("Baskerville Old Face", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Serviço");
+        jlCliente2.setBackground(new java.awt.Color(255, 128, 128));
+        jlCliente2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlCliente2.setForeground(new java.awt.Color(255, 255, 255));
+        jlCliente2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlCliente2.setText("Cod. Func:");
+        jPanel1.add(jlCliente2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 82, 70, -1));
+        jPanel1.add(campoValor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 80, 47, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jlCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, 326, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 182, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jlData1, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tempoServico)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 74, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(ValorServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, 149, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 412, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jbBuscar1)
-                            .addComponent(jLabel2))))
-                .addGap(29, 29, 29))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(88, 88, 88)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(54, 54, 54)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(tempoServico)
-                        .addComponent(campoTempo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlCliente1)
-                            .addComponent(jtCampoCliente1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jbBuscar1))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jlServico1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jcServico1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(ValorServico1)
-                            .addComponent(campoValor1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jlData1)
-                            .addComponent(jdData1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(89, Short.MAX_VALUE))
-        );
+        jlCliente3.setBackground(new java.awt.Color(255, 128, 128));
+        jlCliente3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jlCliente3.setForeground(new java.awt.Color(255, 255, 255));
+        jlCliente3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlCliente3.setText("Hora:");
+        jPanel1.add(jlCliente3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 104, 70, -1));
+        jPanel1.add(campoValor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(84, 102, 47, -1));
+
+        jbBuscar2.setBackground(new java.awt.Color(255, 128, 128));
+        jbBuscar2.setForeground(new java.awt.Color(255, 255, 255));
+        jbBuscar2.setText("Voltar");
+        jbBuscar2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbBuscar2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jbBuscar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 416, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -207,6 +168,10 @@ public class AgendarServico extends javax.swing.JFrame {
     private void jcServico1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcServico1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jcServico1ActionPerformed
+
+    private void jbBuscar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscar2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbBuscar2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -244,16 +209,18 @@ public class AgendarServico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel ValorServico1;
     private javax.swing.JTextField campoTempo;
-    private javax.swing.JTextField campoValor1;
+    private javax.swing.JTextField campoValor2;
+    private javax.swing.JTextField campoValor3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbBuscar1;
+    private javax.swing.JButton jbBuscar2;
     private javax.swing.JComboBox jcServico1;
     private com.toedter.calendar.JDateChooser jdData1;
     private javax.swing.JLabel jlCliente1;
+    private javax.swing.JLabel jlCliente2;
+    private javax.swing.JLabel jlCliente3;
     private javax.swing.JLabel jlData1;
     private javax.swing.JLabel jlServico1;
     private javax.swing.JTextField jtCampoCliente1;
