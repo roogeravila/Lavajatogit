@@ -42,11 +42,12 @@ public class Agendador {
         Carro c1 = new Carro(Relogio);
         ec1.inserir(c1);
         //sorteia quando sera a prox. chegada
-        double r; // sortiar e colocar no r
+        double r, x; // sortiar e colocar no r
         r = gerador.nextDouble();
+        x = -Math.log(r)*20;
         //agenda a prox. chegada
-        agenda.inserir(Relogio+r, "chegadaCarro");
-        System.out.println("Agendou uma chegada para o tempo " + (Relogio+r));
+        agenda.inserir(Relogio+x, "chegadaCarro");
+        System.out.println("Agendou uma chegada para o tempo " + (Relogio+x));
        
     }
     
@@ -61,12 +62,13 @@ public class Agendador {
             enxinM.inserir(auxM);
             
             //sorteia quando acaba enxaque inicial, inserir hora aleatoria na agenda passando hora e função.
-            float r; // sortiar e colocar no r
-            r = gerador.nextFloat();
-            //agenda a prox. chegada
-            agenda.inserir(Relogio+r, "Fim enxague inicial");
+            double r, x; // sortiar e colocar no r
+        r = gerador.nextDouble();
+        x = -Math.log(r)*5;
+        //agenda a prox. chegada
+            agenda.inserir(Relogio+x, "Fim enxague inicial");
             //agenda o fim do enxaque inicial, e agenda hora da prox função, no caso, enxage final.
-            System.out.println("Agendou o fim do enxague inicial para o tempo " + (Relogio+r));
+            System.out.println("Agendou o fim do enxague inicial para o tempo " + (Relogio+x));
         }
     }
     public void fim_enx_in(){
@@ -89,11 +91,12 @@ public class Agendador {
             auxB = espb.remover();
             ensabb.inserir(auxB);
             
-            float r; // sortiar e colocar no r
-        r = gerador.nextFloat();
+            double r, x; // sortiar e colocar no r
+        r = gerador.nextDouble();
+        x = -Math.log(r)*10;
         //agenda a prox. chegada
-        agenda.inserir(Relogio+r, "fim ensaboamento");
-        System.out.println("Agendou o fim do ensaboamento para o tempo " + (Relogio+r));    
+        agenda.inserir(Relogio+x, "fim ensaboamento");
+        System.out.println("Agendou o fim do ensaboamento para o tempo " + (Relogio+x));    
             //sorteia quando acaba ensaboamento
             //agenda o fim do ensaboamento
             
@@ -120,13 +123,14 @@ public class Agendador {
             auxM = em.remover();
             enxfimM.inserir(auxM);
             
-            float r; // sortiar e colocar no r
-        r = gerador.nextFloat();
+            double r, x; // sortiar e colocar no r
+        r = gerador.nextDouble();
+        x = -Math.log(r)*3;
         //agenda a prox. chegada
-        agenda.inserir(Relogio+r, "fim do segundo enxague");
+        agenda.inserir(Relogio+x, "fim do segundo enxague");
             //sorteia quando acaba enxaque final
             //agenda o fim do enxaque final
-        System.out.println("Agendou o fim do enxague final para o tempo " + (Relogio+r));
+        System.out.println("Agendou o fim do enxague final para o tempo " + (Relogio+x));
         }
     }
     public void fim_enx_fim(){

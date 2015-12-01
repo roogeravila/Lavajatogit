@@ -18,24 +18,28 @@ public class Lavajato {
         
     Lavador l1 = new Lavador();
     Lavador l2 = new Lavador();
+    Lavador l3 = new Lavador();
+    Lavador l4 = new Lavador();
     
     Balde b1 = new Balde();
-    Balde b2 = new Balde();
+   // Balde b2 = new Balde();
     
     Mangueira m1 = new Mangueira();
     Mangueira m2 = new Mangueira();
     
     agendador.el1.inserir(l1);
     agendador.el1.inserir(l2);
+    agendador.el1.inserir(l3);
+    agendador.el1.inserir(l4);
     
     agendador.espb.inserir(b1);
-    agendador.espb.inserir(b2);
+    //agendador.espb.inserir(b2);
     
     agendador.em.inserir(m1);
     agendador.em.inserir(m2);
     
     agendador.agenda.inserir(0, "chegadaCarro");
-    
+    agendador.gerador.setSeed(15);//semente do gerador
     while (agendador.cont < 10){
         agendador.faseA();
         agendador.faseB();
